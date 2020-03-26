@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function * gen(){
+            yield 'welcome';
+            yield 'to';
+            return '牧马人'
+        }
+        let g1 = gen()
+        // done 表示未执行完，后面还有语句
+        console.log(g1.next());// {value: "welcome", done: false}
+        console.log(g1.next());
+        console.log(g1.next());
+        console.log(g1.next());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let  arr = [
+            {title: 'aaaa',read: 100, hot: true},
+            {title: 'bbbb',read: 100, hot: true},
+            {title: 'cccc',read: 100, hot: true},
+            {title: 'dddd',read: 100, hot: true}
+        ]
+        let nerArr = arr.map((item , index, arr) => {
+            let json = {};
+            json.t = `^-^${item.title}`;
+            json.r = item.read + 200;
+            json.hot = item.hot == true && '真棒！！'
+
+            return json;
+        })
+        console.log(nerArr);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let map = new Map();
+        let json = {
+            a:1,
+            b:2
+        }
+        map.set('a', 'qqq');
+        map.set(json, 'aaa');
+        map.set('aaa', json)
+        console.log(map);
+        console.log(map.get(json));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

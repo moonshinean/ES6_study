@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // [1,2,3,4,5]  ...[1,2,3,4,5] =>  1,2,3,4,5
+        // 1,2,3,4,5  ...a =>  [1,2,3,4,5]
+     function show(a,b,c){
+        //  分散的数据又重组为数组了
+      //  console.log(a,b,c);
+     }
+     show(...[1,2,3])
+
+    // 剩余运算符的体现（...）  必须放在最后
+     function show1(a,b,...c){
+        //  分散的数据又重组为数组了
+       console.log(a,b,c);
+     }
+     show1(1,2,3,4,5)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

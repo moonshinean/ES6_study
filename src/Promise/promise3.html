@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let promise = Promise.resolve('aa')
+        promise.then(res => {
+            console.log(res);
+        })
+        let promise1 = Promise.reject('error')
+        promise1.then(res =>{}, err => {
+            console.log(err);
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let setArr = new Set(['a','b','c','d'])// set里面不能有重复的值
+        for(let item of setArr.keys()){
+            console.log(item);
+        }
+        console.log('--------------------');
+        for(let item1 of setArr.values()){
+           console.log(item1);
+        }
+        console.log('--------------------');
+        for(let item1 of setArr.entries()){
+           console.log(item1);
+        }
+        console.log('--------------------');
+        for(let [k,val] of setArr.entries()){
+           console.log(k,val);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

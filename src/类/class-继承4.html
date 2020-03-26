@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 父类
+        class Persion{
+            constructor(name){
+                this.name = name;
+            }
+            showName(){
+                console.log('父类的showName执行了');
+                return `名字为：${this.name}`
+            }
+        }
+        // 子类
+        class Student extends Persion{
+             constructor(name, skill){
+                 super(name); // super指的是父级
+                 this.skill = skill;
+             }
+             showName(){
+                super.showName(); // 执行父类的方法
+                // TODO 做子级的事情
+                 console.log('子类的showname');
+             }
+             showSkill(){
+                 return `哥们的技能是： ${this.skill}`
+             }
+        }
+        // 调用
+        let Stu1 = new Student('小明', '逃学')
+        Stu1.showName();
+        console.log(Stu1.showSkill());
+       
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

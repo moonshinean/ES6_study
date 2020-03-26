@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+       let obj = new Proxy({}, {
+           set(target, prop, value){
+               if(prop === 'age'){
+                   if(!Number.isInteger(value)){
+                       throw new TypeError('年龄必须为整数')
+                   }
+                   if(value > 200){
+                       throw new RangeError('年龄超标了，年龄不得大于200')
+                   }
+               }
+               target[prop] = value;
+           }
+       })
+       obj.a = 18;
+       obj.name = 'strive';
+       obj.age = 18.5;
+       console.log(obj);
+    </script>
+</head>
+
+<body>
+</body>
+</html>

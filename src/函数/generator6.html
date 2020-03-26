@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+    //  https://api.github.com/users/itstrive
+    function * gen(val,val1){
+        yield axios.get(`https://api.github.com/users/${val}`)
+        yield axios.get(`https://api.github.com/users/${val1}`)
+    }
+    let g1 = gen('itstrive','moonshine');
+    g1.next().value.then(v => {
+        console.log(v);
+    })
+    g1.next().value.then(val => {
+        console.log(val);
+    })
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

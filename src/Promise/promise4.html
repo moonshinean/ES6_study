@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let promise = Promise.resolve('aaa')
+        let promise1 = Promise.resolve('bbb')
+        let promise2 = Promise.resolve('ccca')
+        Promise.all([promise, promise1, promise2]).then(res => {
+            let [res1, res2, res3] = res;
+            console.log(res1,res2,res3);
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let aaa = 'Strive'
+        // ES6中类的写法
+       const Persion = class {
+            constructor(){// 构造方法函数，调用new，自动执行
+                this.name = 'Strive';
+                this.showName = this.showName.bind(this) // 矫正this
+            }
+            showName(){
+                console.log(this);
+                return `名字为：${this.name}`
+            }
+        }
+        let p1 = new Persion()
+        let {showName} = p1;
+        console.log(showName());
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let reg = /^(?<strive>welcome)-\k<strive>-\1$/
+        let str = 'a -a';
+        let str1 = 'welcome-welcome';
+        let str2 = 'hello-hello'
+        let str3 = 'welcome-welcome-welcome'
+        console.log(reg.test(str));
+        console.log(reg.test(str1));
+        console.log(reg.test(str2));
+        console.log(reg.test(str3));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

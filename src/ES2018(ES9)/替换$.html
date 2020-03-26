@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let str = '2018-03-23';
+        let reg = /(?<year>\d{4})-(?<month>\d{2})-(?<day>\d{2})/;
+        
+        // 2018/03/23
+        str = str.replace(reg, '$<year>/$<month>/$<day>');
+        console.log(str);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

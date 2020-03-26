@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+         function show(...args){
+            console.log(this);
+            console.log(args);
+        }
+        // show(1,2,3,4)
+        // show.call('aaa', 1,2,3,4)
+        // show.apply('111', [1,2,3,4])
+        Reflect.apply(show, '11', [1,3,4,5])
+    </script>
+</head>
+
+<body>
+</body>
+</html>

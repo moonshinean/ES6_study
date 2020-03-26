@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+          window.onload = () => {
+            let aLi = document.querySelectorAll('ul li');
+            // let arrLi = Array.from(aLi); // ES6的方法
+            let arrLi = [].slice.call(aLi); // ES5之前的方法
+            arrLi.pop();
+            console.log(arrLi);
+        }
+    </script>
+</head>
+<body> 
+    <ul>
+        <li>123</li>
+        <li>345</li>
+        <li>567</li>
+        <li>678</li>
+    </ul>
+    
+</body>
+</html>

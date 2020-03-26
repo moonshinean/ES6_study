@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let wSet = new WeakSet();
+        let json = {
+            a:1,
+            b:2
+        }
+        let json2 = {
+            a:2,
+            b:4
+        }
+        wSet.add(json).add(json2);
+        console.log(wSet);
+        console.log(wSet.size);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 父类
+        function Persion(name){
+            this.name = name;
+        }
+        Persion.prototype.showName = function(){
+            return (`名字为：${this.name}`);
+        }
+        // 子类
+        function Student(name, skill){
+            Persion.call(this,name); // 继承属性
+            this.skill = skill;
+        }
+        Student.prototype = new Persion(); // 继承方法
+        // 调用
+        let Stu1 = new Student('小明', '逃学')
+        console.log(Stu1.showName());
+       
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

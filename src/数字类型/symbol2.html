@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let symbol = Symbol('ass')
+        let json = {
+            a:'11',
+            b: 'bbb',
+            [symbol]: 'apple'
+        }
+        for(let key in json){
+            console.log(key);
+        }
+      
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let str = '2018-03-23';
+        let res = /(?<year>\d{4})-(?<month>\d{2})-(?<day>\d{2})/
+
+        let dateArr = str.match(res).groups;
+        console.log(dateArr);
+        let {year, month, day} = dateArr;
+        console.log(year, month, day);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

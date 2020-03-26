@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 箭头函数不能做构造函数
+        // function show(){
+        //     this.name = '123'
+        // }
+        let show = () => {
+            this.name = '123'
+        }
+        let a = new show();
+        console.log(a.name);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 之前类的书写方式
+        function Persion(name, age){
+            this.name = name;
+            this.age = age;
+        }
+        Persion.prototype.showName = function(){
+            return `名字是${this.name}`
+        }
+        Persion.prototype.showAge = function(){
+            return `年龄是${this.age}`
+        }
+        let p1 = new Persion('Strive', 12);
+        console.log(p1.showName());
+        console.log(p1.showAge());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let aaa = 'Strive'
+        // ES6中类的写法
+       const Persion = class {
+            constructor(name,age){// 构造方法函数，调用new，自动执行
+            //    console.log(`构造函数执行了, ${name},${age}`);
+                this.name = name;
+                this.age = age;
+            }
+            showName(){
+                return `名字为：${this.name}`
+            }
+            showAge(){
+                return `年龄为：${this.age}`
+            }
+            //  此处的函数是表达式的形式
+            [aaa](){
+                return `随便啦`
+            }
+        }
+        let p1 = new Persion('Strive', 18)
+        //  调用方式如下
+        console.log(p1.Strive());
+        console.log(p1[aaa]())
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

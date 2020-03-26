@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // ES6中类的写法
+       const Persion = class {
+            constructor(){// 构造方法函数，调用new，自动执行
+            }
+            get aaa(){
+                return 'aaa的属性';
+            }
+            set aaa(val){
+                console.log(`设置aaa的属性，值为：${val}`);
+            }
+        }
+        let p1 = new Persion() 
+        p1.aaa = '123';
+        console.log(p1.aaa);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

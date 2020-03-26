@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+       let DOM = new Proxy({},{
+           get(target, property){
+            //    console.log(property);
+               return function(attr={}, ...children){
+                   const el = document.createElement(property);
+
+                   for(let key of Object.keys(attr)){
+                       el.setAttribute(key , attr[key])
+                   }
+                   for(let child of children){
+                       if(typeof child === 'string') {
+                           child = document.createTextNode(child)
+                       }
+                       el.appendChild(child)
+                   }
+                   return el;
+               }
+           }
+       })
+       
+       let oDiv = DOM.div(
+           {id: 'div1',class: 'aa'}, '我是div', '呵呵呵', 
+           DOM.a({href: 'http://www.baidu.com'}, '访问官网'),
+           DOM.ul({},
+           DOM.li({}, '21'),
+           DOM.li({}, '122'),
+           DOM.li({}, '111'),
+           DOM.li({}, '1222'),
+           )
+        );
+       console.log(oDiv);
+       window.onload = function(){
+         document.body.appendChild(oDiv)
+       }
+    </script>
+</head>
+
+<body>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // [1,2,3,4,5]  ...[1,2,3,4,5] =>  1,2,3,4,5
+        // 1,2,3,4,5  ...a =>  [1,2,3,4,5]
+     function show(...a){
+        //  分散的数据又重组为数组了
+       console.log(a);
+     }
+     function show1 (...a){
+        //  第一种排序的方法
+        //  let a = Array.prototype.slice.call(arguments);
+        // return a.sort();
+        // 第二种排序的方法
+        return a.sort();
+
+     }
+     console.log(show1(1,9,3,8,6));
+    //  show(1,2,3,4,5)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

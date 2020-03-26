@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let arr = [2,2,3]
+        let res = arr.reduceRight((prev,cur,index, arrr) => {
+            //  prev 指的是上一个
+            //  cur 指的是当前值
+            return Math.pow(prev, cur);
+            // 此处的prev 指的是前面所有数据相加的和
+        });
+        console.log(res);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

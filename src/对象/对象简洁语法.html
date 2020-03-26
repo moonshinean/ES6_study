@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let name = 'Strive';
+        let name = 18;
+        let json = {
+            name,  // 等价于 name: name
+            age,  // 等价于 age: age,
+            show: function(){
+                return this.name
+            }
+        }
+        console.log(json.show());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
